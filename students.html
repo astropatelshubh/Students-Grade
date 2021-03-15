@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Student's Grade</title>
+    <meta http-equiv="content-type" content="text/html"; charset="iso-8859-1" />
+  </head>
+  <style>
+    body { font-family: times; }
+    * { box-sizing: border-box; }
+
+    input[type=text] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus{ background-color: #ddd; outline: none; }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    button:hover { opacity:1; }
+
+    .cancelbtn { padding: 14px 20px; background-color: #f44336; }
+
+    .cancelbtn, .signupbtn { float: left; width: 50%; }
+
+    .container { padding: 16px; }
+
+    hr { border: 1px solid #f1f1f1; margin-bottom: 25px; }
+
+    @media screen and (max-width: 300px) { .cancelbtn, .signupbtn { width: 100%; } }
+  </style>
+  <body>
+    <form name="student" method="POST" action="students.php">
+      <div class="container">
+        <h1>PHP-701 Grades for Fall 2018</h1>
+        <hr>
+        <label for="name"><b>Student's Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" />
+
+        <label for="id"><b>Student's ID</b></label>
+        <input type="text" placeholder="Enter ID#" name="id" />
+
+        <label for="grade"><b>Grade</b></label>
+        <input type="text" placeholder="Enter Grade" name="grade" />
+
+        <div class="clearfix">
+          <button type="reset" class="cancelbtn">New Student</button>
+          <button type="submit" name="Submit" class="signupbtn">Submit Details</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
